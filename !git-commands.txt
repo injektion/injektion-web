@@ -1,0 +1,12 @@
+upstream set to:
+
+git remote add upstream https://github.com/zeon-studio/astroplate.git
+git fetch upstream
+
+
+Pull from the upstream whenever there are updates:
+
+git checkout main
+git pull upstream main
+# Then push to your fork
+git push origin main
