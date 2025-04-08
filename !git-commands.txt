@@ -10,3 +10,8 @@ git checkout main
 git pull upstream main
 # Then push to your fork
 git push origin main
+
+
+
+yarn run dev
+yarn run build

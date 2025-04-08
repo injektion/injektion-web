@@ -1,53 +1,63 @@
 ---
 # Banner
 banner:
-  title: "Vancouver Technical Consultantcy"
-  content: "Astroplate is a free starter template built with Astro and TailwindCSS, providing everything you need to jumpstart your Astro project and save valuable time."
+  title: "Fractional CTO Services for Growing Businesses"
+  content: "I work with business owners who are scaling fast but struggling to keep up with the technical side of things. From strategy to systems to security, I help you grow smarter—with the right tech, in the right order."
   image: "/images/banner.png"
+  bulletpoints:
+    - "✅ Align operations "
+    - "🔗 Integrate your tools"
+    - "🔐 Secure your systems"
+    - "📈 Plan for growth"
   button:
     enable: true
-    label: "Get Started For Free"
-    link: "https://github.com/zeon-studio/astroplate"
+    label: "Book a Discovery Call"
+    link: "/contact"
 
 # Features
 features:
-  - title: "What's Included in Astroplate"
+  - title: "🔥 The Pain You're Feeling"
     image: "/images/service-1.png"
-    content: "Astroplate is a comprehensive starter template that includes everything you need to get started with your Astro project. What's Included in Astroplate"
+    content: "You know your business is growing—but your systems aren't keeping up. You’ve patched things together to get this far, but now it's starting to show: "
     bulletpoints:
-      - "10+ Pre-build pages"
-      - "95+ Google Pagespeed Score"
-      - "Build with Astro and TailwindCSS for easy and customizable styling"
-      - "Fully responsive on all devices"
-      - "SEO-optimized for better search engine rankings"
-      - "**Open-source and free** for personal and commercial use"
+      - Repetitive manual tasks are draining time and attention
+      - Your software tools don’t talk to each other—or anyone else
+      - Projects stall because there’s no one making confident technical decisions
+      - Security and compliance concerns are quietly piling up
+      - And that technical debt you’ve been putting off? It’s becoming a real liability
+    posttext: "You don’t need a one-off fix or another SaaS tool.
+You need someone who can <strong>take ownership of your technical direction and help you scale intentionally</strong>."
     button:
       enable: false
       label: "Get Started Now"
       link: "#"
 
-  - title: "Discover the Key Features Of Astro"
+  - title: "🧰 What I Do"
     image: "/images/service-2.png"
-    content: "Astro is an all-in-one web framework for building fast, content-focused websites. It offers a range of exciting features for developers and website creators. Some of the key features are:"
-    bulletpoints:
-      - "Zero JS, by default: No JavaScript runtime overhead to slow you down."
-      - "Customizable: Tailwind, MDX, and 100+ other integrations to choose from."
-      - "UI-agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit and more."
+    content: "I act as your on-call technical lead—helping you make smart decisions, execute with clarity, and stay ahead of what’s coming next.<h5 class='mb-4'>Core Service Areas:</h5>
+    <ul class=''>
+      <li class='mb-4'><strong>🧭 Strategic Planning for Growth</strong><br/>Build a roadmap that supports your next stage of growth.<br/>→ Technical audits, scalability planning, vendor selection, IT strategy</li>
+      <li class='mb-4'><strong>🔄 Workflow Automation & Systems Integration</strong><br/>Make your tools work for you—not the other way around.<br/>→ Automate repetitive tasks, connect platforms, reduce operational friction</li>
+      <li class='mb-4'><strong>🛡 Security, Compliance & Risk Management</strong><br/>Protect your business from the threats you can’t afford to ignore.<br/>→ Data protection, security audits, regulatory readiness</li>
+    </ul>
+    "
     button:
       enable: true
       label: "Get Started Now"
-      link: "https://github.com/zeon-studio/astroplate"
+      link: "/contact"
 
-  - title: "The Top Reasons to Choose Astro for Your Next Project"
+  - title: "🧠 Why Work With Me"
     image: "/images/service-3.png"
-    content: "With Astro, you can build modern and content-focused websites without sacrificing performance or ease of use."
+    content: "I translate business challenges into scalable, secure, and efficient solutions."
     bulletpoints:
-      - "Instantly load static sites for better user experience and SEO."
-      - "Intuitive syntax and support for popular frameworks make learning and using Astro a breeze."
-      - "Use any front-end library or framework, or build custom components, for any project size."
-      - "Built on cutting-edge technology to keep your projects up-to-date with the latest web standards."
+      - "30+ years of entrepreneurial + technical experience"
+      - "Deep understanding of both business strategy and software systems"
+      - "Clear communicator—no jargon, no condescension"
+      - "Comfortable working directly with founders, leadership, and small teams"
+      - "Preference for open source bootstrapped solutions vs expensive enterprise lock-in"
+      - "Available on retainer as a <strong>hands-on, proactive partner</strong>"
     button:
       enable: false
       label: ""
-      link: ""
+      link: "" 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-meta_title: ""
-description: "this is meta description"
+meta_title: "Contact Injektion Media"
+description: "Send an email to contact Injektion Media"
 draft: false
 ---

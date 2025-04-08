@@ -1,5 +1,6 @@
 import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
+import { sub } from "date-fns";
 
 // Post collection schema
 const blogCollection = defineCollection({
@@ -77,12 +78,51 @@ const contactCollection = defineCollection({
   }),
 });
 
+// services collection schema
+const servicesCollection = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/services" }),
+  schema: z.object({
+    title: z.string(),
+    meta_title: z.string().optional(),
+    description: z.string().optional(),
+    image: z.string().optional(),
+    draft: z.boolean().optional(),
+    banner: z.object({
+      title: z.string(),
+      subtitle: z.string().optional(),
+      content: z.string(),
+      image: z.string().optional(),
+      button: z.object({
+        enable: z.boolean(),
+        label: z.string(),
+        link: z.string(),
+      }),
+    }),
+    features: z.array(
+      z.object({
+        title: z.string(),
+        image: z.string(),
+        content: z.string(),
+        bulletpoints: z.array(z.string()).optional(),
+        posttext: z.string().optional(),
+        button: z.object({
+          enable: z.boolean(),
+          label: z.string(),
+          link: z.string(),
+        }),
+      }),
+    ),
+  }),
+});
+
+
 // Homepage collection schema
 const homepageCollection = defineCollection({
   loader: glob({ pattern: "**/-*.{md,mdx}", base: "src/content/homepage" }),
   schema: z.object({
     banner: z.object({
       title: z.string(),
+      subtitle: z.string().optional(),
       content: z.string(),
       image: z.string(),
       button: z.object({
@@ -96,7 +136,8 @@ const homepageCollection = defineCollection({
         title: z.string(),
         image: z.string(),
         content: z.string(),
-        bulletpoints: z.array(z.string()),
+        bulletpoints: z.array(z.string()).optional(),
+        posttext: z.string().optional(),
         button: z.object({
           enable: z.boolean(),
           label: z.string(),
@@ -110,7 +151,7 @@ const homepageCollection = defineCollection({
 // Call to Action collection schema
 const ctaSectionCollection = defineCollection({
   loader: glob({
-    pattern: "call-to-action.{md,mdx}",
+    pattern: "call-to-action*.{md,mdx}",
     base: "src/content/sections",
   }),
   schema: z.object({
@@ -156,6 +197,7 @@ export const collections = {
   pages: pagesCollection,
   about: aboutCollection,
   contact: contactCollection,
+  services: servicesCollection,
 
   // sections
   ctaSection: ctaSectionCollection,

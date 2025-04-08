@@ -4,6 +4,8 @@ import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import type { CollectionEntry } from "astro:content";
 import { getEntry, render } from "astro:content";
+import Social from "@/components/Social.astro";
+import social from "@/config/social.json";
 
 const about = (await getEntry("about", "-index")) as CollectionEntry<"about">;
 const { Content } = await render(about);
@@ -36,6 +38,7 @@ const { title, description, meta_title, image } = about.data;
           <div class="content">
             <Content />
           </div>
+          <Social source={social.main} className="social-icons" />
         </div>
       </div>
     </div>

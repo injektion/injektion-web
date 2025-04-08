@@ -1,45 +1,39 @@
 ---
 import ImageMod from "@/components/ImageMod.astro";
-import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
-import CallToAction from "@/partials/CallToAction.astro";
-import Testimonial from "@/partials/Testimonial.astro";
-import type { Button, Feature } from "@/types";
-import type { CollectionEntry } from "astro:content";
-import { getEntry } from "astro:content";
 import { FaCheck } from "react-icons/fa";
 
-interface Homepage {
-  banner: {
-    title: string;
-    subtitle?: string;
-    content: string;
-    image: string;
-    button: Button;
-  };
-  features: Feature[];
-}
 
-const homepage = (await getEntry(
-  "homepage",
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+
+import { getEntry } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+const services = (await getEntry(
+  "services",
   "-index"
-)) as CollectionEntry<"homepage">;
-
-const testimonial = (await getEntry(
-  "testimonialSection",
-  "testimonial"
-)) as CollectionEntry<"testimonialSection">;
+)) as CollectionEntry<"services">;
 
 const call_to_action = (await getEntry(
   "ctaSection",
-  "call-to-action"
+  "call-to-action-services"
 )) as CollectionEntry<"ctaSection">;
 
-const { banner, features } = homepage.data as Homepage;
 
+
+const { title, description, meta_title, image, banner, features} = services.data;
 ---
 
-<Base>
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+
   <!-- Banner -->
   <section class="section pt-14">
     <div class="container">
@@ -134,6 +128,6 @@ const { banner, features } = homepage.data as Homepage;
   }
   <!-- /Features -->
 
-  <Testimonial testimonial={testimonial} />
-  <CallToAction call_to_action={call_to_action} />
+<CallToAction call_to_action={call_to_action} />
+
 </Base>
