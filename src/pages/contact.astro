@@ -2,13 +2,16 @@
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import PageHeader from "@/partials/PageHeader.astro";
-import { getEntry } from "astro:content";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
 const contact = (await getEntry(
   "contact",
   "-index"
 )) as CollectionEntry<"contact">;
+const { Content } = await render(contact);
 const { contact_form_action }: { contact_form_action: string } = config.params;
 const { title, description, meta_title, image } = contact.data;
 ---
@@ -19,12 +22,49 @@ const { title, description, meta_title, image } = contact.data;
   description={description}
   image={image}
 >
-  <PageHeader title={title} />
+  <section class="section-sm">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="text-center md:col-10 lg:col-7">
+          {
+            image && (
+              <ImageMod
+                class="mx-auto mb-6 rounded-lg"
+                src={image}
+                width={200}
+                height={200}
+                alt={title}
+                format="webp"
+              />
+            )
+          }
+          <h2 set:html={markdownify(title)} class="h3 mb-6" />
+          <div class="content">
+            <Content />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section-sm">
     <div class="container">
       <div class="row">
         <div class="mx-auto md:col-10 lg:col-6">
-          <form  method="POST" name="contact_form" netlify>
+          <form  method="POST" name="contact_form" netlify netlify-honeypot="sticky-field" data-netlify-recaptcha="true">
+            <div class="hidden">
+              <label for="sticky-field" class="form-label">
+                Confirm Email <span class="text-red-500">*</span>
+              </label>
+              <input
+                id="sticky-field"
+                name="sticky-field"
+                class="form-input"
+                placeholder="John Doe"
+                type="text"
+              />
+            </div>
+
             <div class="mb-6">
               <label for="name" class="form-label">
                 Full Name <span class="text-red-500">*</span>
@@ -39,7 +79,7 @@ const { title, description, meta_title, image } = contact.data;
             </div>
             <div class="mb-6">
               <label for="email" class="form-label">
-                Working Mail <span class="text-red-500">*</span>
+                Email <span class="text-red-500">*</span>
               </label>
               <input
                 id="email"
@@ -50,8 +90,20 @@ const { title, description, meta_title, image } = contact.data;
               />
             </div>
             <div class="mb-6">
+              <label for="phone" class="form-label">
+                Phone Number <span class="text-red-500">*</span>
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                class="form-input"
+                placeholder="+1 234 567 890"
+                type="tel"
+              />
+            </div>
+            <div class="mb-6">
               <label for="message" class="form-label">
-                Anything else? <span class="text-red-500">*</span>
+                How can I help? <span class="text-red-500">*</span>
               </label>
               <textarea
                 id="message"

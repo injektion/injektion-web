@@ -16,8 +16,8 @@ banner:
 
 # Features
 features:
-  - title: "🔥 The Pain You're Feeling"
-    image: "/images/service-1.png"
+  - title: "The Pain You're Feeling"
+    image: "/images/homepage/confusion.png"
     content: "You know your business is growing—but your systems aren't keeping up. You’ve patched things together to get this far, but now it's starting to show: "
     bulletpoints:
       - Repetitive manual tasks are draining time and attention
@@ -32,8 +32,8 @@ You need someone who can <strong>take ownership of your technical direction and 
       label: "Get Started Now"
       link: "#"
 
-  - title: "🧰 What I Do"
-    image: "/images/service-2.png"
+  - title: "What I Do"
+    image: "/images/homepage/chess.png"
     content: "I act as your on-call technical lead—helping you make smart decisions, execute with clarity, and stay ahead of what’s coming next.<h5 class='mb-4'>Core Service Areas:</h5>
     <ul class=''>
       <li class='mb-4'><strong>🧭 Strategic Planning for Growth</strong><br/>Build a roadmap that supports your next stage of growth.<br/>→ Technical audits, scalability planning, vendor selection, IT strategy</li>
@@ -46,8 +46,8 @@ You need someone who can <strong>take ownership of your technical direction and 
       label: "Get Started Now"
       link: "/contact"
 
-  - title: "🧠 Why Work With Me"
-    image: "/images/service-3.png"
+  - title: "Why Work With Me"
+    image: "/images/homepage/handshake.png"
     content: "I translate business challenges into scalable, secure, and efficient solutions."
     bulletpoints:
       - "30+ years of entrepreneurial + technical experience"

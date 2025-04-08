@@ -6,7 +6,7 @@ draft: false
 
 banner:
   title: "But what can you do for us?"
-  content: "<p class='mb-4'><strong>I help small, growing businesses scale with smarter, more secure systems.</strong></p>
+  content: "<h6 class='mb-4'>I help small, growing businesses scale with smarter, more secure systems.</h6>
   <p class='mb-4'>My fractional CTO services are built to meet you where you are—and help you get where you want to go. Whether you're modernizing legacy systems, untangling disconnected tools, or preparing for serious growth, I act as your trusted technical lead, guiding your next moves and building the systems to support them.</p>"
   button:
     enable: true
@@ -15,8 +15,8 @@ banner:
 
 # Features
 features:
-  - title: "💡 Strategic Planning for Growth"
-    image: "/images/service-1.png"
+  - title: "Strategic Planning for Growth"
+    image: "/images/services/growth.png"
     content: "<h6 class='mb-4'>Make your tech work for your business—today and into the future.</h6>
 <p class='mb-4'>Growing businesses hit a point where ad hoc tools and short-term fixes don’t cut it anymore. That’s where I come in. I’ll help you identify what’s working, what’s in the way, and what you actually need to scale efficiently.</p>
 
@@ -37,8 +37,8 @@ features:
       label: "Get Started Now"
       link: "#"
 
-  - title: "🔄 Workflow Automation & Systems Integration"
-    image: "/images/service-2.png"
+  - title: "Workflow Automation & Systems Integration"
+    image: "/images/services/automation.png"
     content: "<h6 class='mb-4'>Streamline how your team works, so you can focus on what actually moves the needle.</h6>
 <p class='mb-4'>If your team is wasting time on repetitive tasks, disconnected software, or manual workarounds, you’re leaking time and money. I design and implement automation and integration solutions that make your systems run smoother and faster—without replacing everything you already use.</p>
 
@@ -59,8 +59,8 @@ features:
       label: "Get Started Now"
       link: "#"
 
-  - title: "🛡 Security, Compliance & Risk Management"
-    image: "/images/service-3.png"
+  - title: "Security, Compliance & Risk Management"
+    image: "/images/services/security.png"
     content: "<h6 class='mb-4'>Get peace of mind by protecting your business from preventable risks.</h6>
 <p class='mb-4'>Most small businesses overlook security and compliance until it's too late. I help you identify vulnerabilities, harden your systems, and create a security posture that protects your team, your clients, and your reputation.</p>
 
@@ -81,8 +81,8 @@ features:
       label: "Get Started Now"
       link: "#"
 
-  - title: "🧩 Need Something Custom?"
-    image: "/images/service-4.png"
+  - title: "Need Something Custom?"
+    image: "/images/services/custom.png"
     content: "<h6 class='mb-4'>Have a unique platform, niche use case, or weird edge-case system? </h6>
     
     <p class='mb-4'>Good. That’s where I shine.</p>
