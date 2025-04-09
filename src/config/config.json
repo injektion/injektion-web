@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Injektion Media",
+    "title": "Injektion Media - Vancouver Technical Consultant",
     "base_url": "https://new.injektion.com",
     "base_path": "/",
     "trailing_slash": false,
@@ -9,7 +9,7 @@
     "logo_darkmode": "/images/logo-darkmode.png",
     "logo_width": "150",
     "logo_height": "22",
-    "logo_text": "Injektion Media"
+    "logo_text": "Injektion Media - Vancouver Technical Consultant",
   },
 
   "settings": {
