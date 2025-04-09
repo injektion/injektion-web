@@ -5,9 +5,9 @@ description: "this is meta description"
 draft: false
 
 banner:
-  title: "But what can you do for us?"
+  title: "What can you do for us?"
   content: "<h6 class='mb-4'>I help small, growing businesses scale with smarter, more secure systems.</h6>
-  <p class='mb-4'>My fractional CTO services are built to meet you where you are—and help you get where you want to go. Whether you're modernizing legacy systems, untangling disconnected tools, or preparing for serious growth, I act as your trusted technical lead, guiding your next moves and building the systems to support them.</p>"
+  <p class='mb-4'>My fractional CTO services are built to meet you where you are—and help you get where you want to go. Whether you're modernizing legacy systems, untangling disconnected tools, or preparing for serious growth, I act as your trusted <strong>technical lead</strong>, guiding your next moves and building the systems to support them.</p>"
   button:
     enable: true
     label: "Book a Discovery Call"
