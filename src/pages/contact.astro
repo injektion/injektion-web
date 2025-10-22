@@ -52,7 +52,6 @@ const { title, description, meta_title, image } = contact.data;
       <div class="row">
         <div class="mx-auto md:col-10 lg:col-6">
           <form  method="POST" name="contact" data-netlify="true" netlify-honeypot="sticky-field" data-netlify-recaptcha="true">
-
             <div class="hidden">
               <label for="sticky-field" class="form-label">
                 Confirm Email <span class="text-red-500">*</span>
@@ -115,6 +114,7 @@ const { title, description, meta_title, image } = contact.data;
                 placeholder="Message goes here..."
                 rows="8"></textarea>
             </div>
+            <div data-netlify-recaptcha="true"></div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
